@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;400;500;600;700&display=swap');   
+        *{
+            margin:0px;
+            padding:0px;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body{
+            overflow-x: hidden;
+        }
+        a{
+            text-decoration: none;
+        }
+        
+        ul{
+            list-style: none;
+        }
+
+        :root{
+            --bg-color1:#dfa900;
+            --bg-color2:white;
+        }
+
+        .navbar{
+            display: flex;
+            justify-content: space-between;
+            /* max-width: 90%; */
+            /* margin: 25px auto; */
+            
+            align-items: center;
+            width:100vw;
+            padding:10px;
+            background-color: var(--bg-color1);
+        }
+        .menu{
+            margin-left:80px;   /*30px*/
+        }
+        .menu_list{
+            display:flex;
+            gap:15px;
+        }
+        .menu_list a{
+            color: var(--bg-color2);
+            font-weight: 600;
+            font-size: 0.9rem;
+            border-radius: 20px;
+            padding: 7px;          /*defined here and not did it in hover so as to stop suffling/movement occuring when hovering it */
+        }
+        .menu_list a:hover{
+            background-color: var(--bg-color2);
+            color: var(--bg-color1);
+            text-decoration: underline;
+        }
+        .contact{
+            display: flex;
+            gap:25px;
+            margin-right: 35px;
+        }
+        .contact a{
+            color: var(--bg-color1);
+            font-size: 0.9rem;
+            font-weight: 600;
+            background-color: var(--bg-color2);
+            border-radius: 20px;
+        }
+        .contact a:hover{
+            /* background-color: #e6c700c1; */
+            color: var(--bg-color2);
+            background-color: var(--bg-color1);
+            text-decoration: underline;
+        }
+        .email{
+            padding: 8px 20px;
+        }
+        .phone{
+            padding: 8px 9px;
+        }
+
+        .center{
+            width:100vw;
+        }
+        .section{
+            max-width:70%;
+            margin:85px auto;
+            display: flex;
+            gap:25px;
+        }
+
+        .main{
+            display: flex;
+            flex-direction: column;
+            gap:50px;
+            margin-right: 20px;
+            animation:slidefromleft 1s ease forwards;
+            /* text-align: center; */
+        }
+        @keyframes slidefromleft {
+            0%{
+                opacity: 0;
+                transform: translateX(-100%);
+            }
+            100%{
+                opacity: 1;
+                transform: translateX(0%);
+            }
+        }
+        .main_one{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .main_one h1{
+            font-size: 2.5rem;
+            color: var(--bg-color1);
+        }
+        .main_two{
+            font-size: 1.2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .main_two h4{
+            color: var(--bg-color1);
+            font-size: 1.5rem;
+        }
+        .main_two p{
+            font-weight: 400;
+            font-size: 1.35rem;
+        }
+        .main_three{
+            font-size: 1.2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .main_three h4{
+            font-size: 1.5rem;
+        }
+        .register a{
+            background-color: var(--bg-color1);
+            color: var(--bg-color2);
+            padding: 10px 18px;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+        .register a:hover{
+            background-color:#e6c700c1;
+        }
+        .image{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-right: 25px;
+        }
+     
+        .image img{
+            height:250px;
+            width: 300.83px;
+        }
+
+        @media (max-width:1370px) {
+            .navbar{
+                flex-direction: column;
+                gap:15px;
+            }
+    
+        }
+
+        @media (max-width:1100px) {
+            .menu{
+                margin-left:0px;
+            }
+            .menu_list{
+                display: grid;
+                grid-template-columns: repeat(4,1fr);
+                text-align: center;
+                margin-left: 0px;
+                gap:10px;
+
+            }
+        }
+
+        @media (max-width:900px) {
+            .section{
+                flex-direction: column;
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+                gap:40px;
+            }
+            .main{
+                gap:50px;
+            }
+            .image{
+                flex-direction: row;
+            }
+        }
+
+
+        @media(max-width:640px){
+            .image{
+                flex-direction: column;
+            }
+        }
+
+        @media(max-width:500px){
+            .menu_list{
+                grid-template-columns: repeat(2,1fr);
+            }
+            .contact{
+                margin-right: 0px;
+                gap:60px;
+            }
+            .main{
+                margin: 15px;
+            }
+            .image{
+                margin-right: 0px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="menu">
+                <ul class="menu_list">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#sponsers">Sponsers</a></li>
+                    <li><a href="#committees">Committees</a></li>
+                    <li><a href="#location">Location</a></li>
+                    <li><a href="#accomodation">Accomodation</a></li>
+                    <li><a href="#souvenir">Souvenir</a></li>
+                    <li><a href="#registration_fee">Registration Fee</a></li>
+                </ul>
+            </div>
+            <div class="contact">
+                <a href="tel:123-456-789" class="phone">Contact Us</a>
+                <a href="mailto:xyz@gmail.com" class="email">E-Mail</a>
+            </div>
+        </div>
+
+
+        <div class="center">
+            <div class="section">
+                <div class="main">
+                    <div class="main_one">
+                        <p>Very proud to introduce</p>
+                        <h1>IIChE ChemCon 2024</h1>
+                    </div>
+                    <div class="main_two">
+                        <p>Role of Chemical Engineering towards Sustainable Development and Atmanirbhar bharat. Explore the latest innovations in the world of chemistry.</p>
+                        <h4>December 27-30,2024</h4>
+                    </div>
+                    <div class="main_three">
+                        <p>Organised by</p>
+                        <h4><pre>Institute of Chemical Engineers 
+Doaba Regional Centre 
+NIT Jalandhar</pre></h4>
+                    </div>
+                    <div class="register">
+                        <a href="#register" id="register">Register Now</a>
+                    </div>
+                </div>
+                <div class="image">
+                    <img src="chemcon.png" alt="image 1">
+                    <img src="chemcon 2.png" alt="image 2">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
